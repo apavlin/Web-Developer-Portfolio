@@ -1,0 +1,15 @@
+include ../mixins/icon_mix.pug
+
+ul.social
+  li.social__item
+    a.social__link(href='https://vk.com/apavlin' target="_blank")
+      span.social__text Вконтакте
+      +icon('vk')
+  li.social__item
+    a(class='social__link' href='https://github.com/apavlin' target="_blank")
+      span.social__text git
+      +icon('github')
+  li.social__item
+    a(class='social__link' href='https://linkedin.com/in/apavlin' target="_blank")
+      span.social__text Линкедин
+      +icon('in')

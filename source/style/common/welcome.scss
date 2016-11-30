@@ -1,0 +1,126 @@
+.welcome {
+  height: 100%;
+  width: 100%;
+  background:url('../img/water.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+    &:before {
+      content: " ";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+}
+
+.auth {
+  position: absolute;
+  right: 7%;
+  top: 6%;
+
+  &__link {
+      padding: 12px 29px;
+  border: 2px solid white;
+  border-radius: 40px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    &:hover {
+  background-color: rgba(18,38,32,0.6);
+
+    }
+  }
+
+}
+.window {
+  background-color: rgba(18,38,32,0.6);
+  // width: 380px;
+  // height: 395px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  &__container {
+    padding: 40px 70px 0 70px;
+  }
+  &__socials {
+    padding-bottom: 37px;
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  &__photo{
+    width: 143px;
+    height: 143px;
+    margin-bottom: 13px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__img{
+    width: 143px;
+    height: 143px;
+  }
+  &__name{
+    font-family: 'robotoregular';
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  &__descr{
+    font-family: 'robotomedium';
+    font-size: 16px;
+    opacity:0.8;
+    margin-bottom: 35px;
+  }
+}
+
+.social {
+  display: inline-block;
+  padding: 0;
+    &__item {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    &__text {
+      display: none;
+    }
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: #8c9895;
+    &:hover {
+      color:#4e8839;
+    }
+}
+
+.nav {
+  &__list{
+    margin: 0;
+    padding: 0;
+    background-color: #5f8d53;
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    padding: 0 31px;
+      &:nth-of-type(1n+2) {
+        border-left: 2px solid rgba(222, 227, 231, 0.502);
+      }
+      &:hover {
+        background-color:#477d38;
+      }
+  }
+  &__link{
+    font-family: 'robotomedium';
+    font-size: 16px;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    line-height: 2.75rem;
+    text-align: center;
+    text-decoration: none;
+  }
+}

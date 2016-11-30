@@ -1,0 +1,23 @@
+.welcome
+  .auth
+    a.auth__link(href="login.html") Авторизоваться
+  .window
+    .window__container
+      .window__user
+        .user
+          .user__photo
+            img(src="../assets/img/avatar.jpg", alt="").user__img
+          .user__name Павел Адашкевич
+          .user__descr Личный сайт разработчика
+      .window__socials
+        include ../common/_socials.pug
+    .window__nav
+      nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link(href="myworks.html") Мои работы
+          li.nav__item
+            a.nav__link(href="aboutme.html") Обо мне
+          li.nav__item
+            a.nav__link(href="blog.html") Блог
+include ../common/_footer.pug
