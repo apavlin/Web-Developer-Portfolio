@@ -3,45 +3,45 @@
   width: 100%;
   background:url('../img/water.jpg') center center no-repeat;
   background-size: cover;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
-    &:before {
-      content: " ";
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-    }
+  &__auth {
+    align-self: flex-end;
+    padding: 20px 80px;
+  }
+  &__window {
+    align-self: center;
+    // justify-content: center;
+  }
+  &__footer {
+
+  }
 }
 
 .auth {
-  position: absolute;
-  right: 7%;
-  top: 6%;
 
   &__link {
-      padding: 12px 29px;
-  border: 2px solid white;
-  border-radius: 40px;
+    padding: 12px 29px;
+    border: 2px solid white;
+    border-radius: 40px;
     display: block;
     height: 100%;
     width: 100%;
-    &:hover {
-  background-color: rgba(18,38,32,0.6);
-
-    }
+      &:hover {
+        background-color: rgba(18,38,32,0.6);
+      }
   }
 
 }
 .window {
   background-color: rgba(18,38,32,0.6);
-  // width: 380px;
-  // height: 395px;
   border-radius: 5px;
-  display: inline-block;
-  vertical-align: middle;
   overflow: hidden;
   &__container {
-    padding: 40px 70px 0 70px;
+  padding: 40px 70px 0 70px;
+
   }
   &__socials {
     padding-bottom: 37px;
@@ -77,50 +77,71 @@
   }
 }
 
-.social {
-  display: inline-block;
-  padding: 0;
-    &__item {
-      display: inline-block;
-      margin-right: 20px;
-    }
-    &__text {
-      display: none;
-    }
-}
-
-.icon {
-  font-size: 1.3rem;
-  color: #8c9895;
-    &:hover {
-      color:#4e8839;
-    }
-}
-
 .nav {
   &__list{
     margin: 0;
     padding: 0;
-    background-color: #5f8d53;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
   &__item {
-    padding: 0 31px;
-      &:nth-of-type(1n+2) {
-        border-left: 2px solid rgba(222, 227, 231, 0.502);
-      }
-      &:hover {
-        background-color:#477d38;
-      }
+
+    height: 100%;
+    padding: 0 30px 20px 0;
+
   }
   &__link{
     font-family: 'robotomedium';
     font-size: 16px;
     text-align:center;
-    color: rgb(255, 255, 255);
-    line-height: 2.75rem;
+    color: white;
     text-align: center;
     text-decoration: none;
+    &:hover{
+      color:#4e8839;
+    }
+  }
+}
+
+  //- стилизация меню для страницы привествия/авторизации
+  .nav_welcome {
+    .nav {
+    &__list{
+      display: flex;
+      flex-wrap: nowrap;
+
+      // justify-content: center;
+      width: 100%;
+    }
+    &__item {
+      flex:1;
+      background-color: #5f8d53;
+      padding: 0 0;
+        &:nth-of-type(1n+2) {
+          border-left: 2px solid rgba(222, 227, 231, 0.502);
+        }
+        &:hover {
+          background-color:#477d38;
+        }
+    }
+    &__link{
+      line-height: 2.75rem;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+
+.social {
+  &_gray {
+  .icon {
+    color: #8c9895;
+    &:hover {
+      color:#4e8839;
+    }
+  }
   }
 }

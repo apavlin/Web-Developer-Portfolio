@@ -1,0 +1,65 @@
+.top {
+  background:url('../img/water.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 550px;
+    &__container {
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 30px 50px
+    }
+    &__head {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__arrowDown{
+   position: absolute;
+    bottom: 5%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    }
+    &__triangle {
+      position: absolute;
+      bottom: -0.8%;
+      width: 100%;
+    }
+    &__user {
+        .user {
+          height: 100%;
+            &__background {
+              height: 250px;
+              width: 100%;
+              position: absolute;
+              background: url('../img/portfolio_header.svg') center center no-repeat;
+              background-size: contain;
+              opacity: 0.15;
+            }
+        }
+    }
+}
+
+
+.triangle {
+  &_left{
+      fill: #f4f5f0;
+    }
+
+  &_right{
+      fill: #ebefe2;
+    }
+}
+
+
+.icon-hamburger {
+  font-size: 2rem;
+}
+
+.icon-arrow_down {
+  font-size: 1rem;
+}
+
+

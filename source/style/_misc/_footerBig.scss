@@ -1,0 +1,39 @@
+.footerBig {
+  position: absolute;
+   left: 0;
+  right: 0;
+  bottom: 0;
+  &__list {
+    color: white;
+    background: rgba(#373e42, .85);
+    display: flex;
+    padding: 20px;
+  }
+  &__item {
+    width: 33%;
+    padding: 0 20px;
+    &:nth-of-type(1n+2) {
+        border-left: 2px solid rgba(222, 227, 231, 0.502);
+      }
+  }
+  &__copyright{
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background: rgba(#77a266, .85);
+  }
+}
+
+
+
+.quote {
+  font-family: 'robotolight';
+font-style: italic;
+line-height: 1.5rem;
+  &__text {
+    opacity: 0.5;
+  }
+  &__author {
+    font-weight: bold;
+  }
+}

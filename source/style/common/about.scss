@@ -1,0 +1,221 @@
+.aboutme {
+
+  &__info{
+    display: flex;
+  }
+  &__description {
+    width: 50%;
+    background: #f4f5f0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+  &__skills {
+    width: 50%;
+    display: block;
+    padding: 0 40px ;
+    background: #ebefe2;
+  }
+
+  &__myphoto {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+
+  }
+
+  &__content {
+    width: 50%;
+    padding: 20px;
+    color: #566358;
+  }
+  &__map {
+    position: relative;
+  }
+
+  &__contacts {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 20;
+  }
+}
+
+
+#aboutme__map {
+  width: 100%;
+  height: 1000px;
+}
+
+.contacts {
+  border-radius: 5px;
+  padding: 40px;
+  background: rgba(235,239,226, 0.89);
+    &__list{
+    }
+    &__item{
+      padding-bottom: 25px;
+        &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    &__link{
+      display: flex;
+      &:hover {
+          animation-name: swing;
+          animation-duration: 0.7s;
+      }
+
+    }
+    &__text{
+      padding-left: 10px;
+      color: #566358;
+
+    }
+    &__icon{
+      display: flex;
+      justify-content: center;
+    }
+    .icon {
+      fill: #6c9c5a;
+    }
+}
+
+.myphoto {
+  border-radius: 3px;
+}
+
+.text {
+  font-family: 'robotoregular';
+  text-align: justify;
+  line-height: 24px;
+  padding-bottom: 40px;
+
+}
+.title {
+    font-family: 'sansus_webissimoregular';
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+
+      &:after {
+        margin-top: 20px;
+        position: absolute;
+        display: block;
+        content: '';
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 7rem;
+        height: 3px;
+        background: #566358;
+      }
+  &_big {
+      font-size: 4rem;
+      color: #373e42;
+      position: relative;
+    }
+  &_small {
+      margin: 0 auto;
+      max-width: 25rem;
+      font-size: 3rem;
+      color: #373e42;
+      position: relative;
+    }
+  &_about{
+    }
+}
+
+
+
+.skills {
+  &__list {
+
+  }
+  &__item {
+    margin-bottom: 30px;
+
+  }
+}
+
+.technology {
+  padding-bottom: 10px;
+  font-family: 'robotomedium';
+    font-size: 1.8rem;
+
+  &__item{
+    position: relative;
+    display: inline-block;
+    margin-right: 38px;
+      &:last-child {
+        margin-right: 0;
+      }
+  }
+  &__name {
+    font-family: 'robotomedium';
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4e8839;
+    text-align: center;
+  }
+  &__graph {
+    fill: none;
+    stroke-width: 20;
+    position: relative;
+    &_fill {
+
+    }
+  }
+}
+
+.icon-about_header {
+  font-size: 7.5rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  fill: #4e8839;
+  opacity: 0.1;
+}
+
+.icon-envelope2 {
+  font-size: 1rem;
+}
+
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

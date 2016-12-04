@@ -24,7 +24,7 @@ module.exports = function() {
             render: {
               scss: {
                 dest:'../../style/_misc/_sprite.scss', //куда будет генерироваться получившийся файл стилей для наших иконок (в нём будут размеры)
-                template: './source/style/_misc/_sprite-template.scss' // шаблон для генерации файла scss
+                template: './source/style/template/_sprite-template.scss' // шаблон для генерации файла scss
               }
             }
           }

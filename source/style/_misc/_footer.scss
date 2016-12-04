@@ -1,13 +1,16 @@
 .footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  align-self: flex-end;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+
     &__text {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100px;
+      // height: 70px;
+      padding: 35px 0;
       font-family: 'robotoregular';
       color: white;
     }

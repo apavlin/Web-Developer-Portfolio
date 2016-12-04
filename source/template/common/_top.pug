@@ -1,0 +1,23 @@
+.top
+  .top__container
+    .top__head
+      .head__socials
+        include ../common/_socials.pug
+      .head__menu
+        .hamburger
+          +icon('hamburger')
+    .top__user
+      .user
+        .user__background
+        .user__photo
+          img(src="../assets/img/avatar.jpg", alt="").user__img
+        .user__name Павел Адашкевич
+        .user__descr Личный сайт разработчика
+    .top__arrowDown
+      .arrowDown
+        a(href="").arrowDown__link
+          +icon('arrow_down')
+  .top__triangle
+    svg.triangle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 80', preserveaspectratio='none')
+      polygon.triangle_left(points="0,0   0,86   500.8,86   500.8,75.5")
+      polygon.triangle_right(points="1000,0   1000,86   500,86   500,75.5")

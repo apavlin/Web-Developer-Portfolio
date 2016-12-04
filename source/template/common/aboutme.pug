@@ -1,0 +1,57 @@
+.aboutme
+  section.aboutme__top
+    include ../common/_top
+
+  section.aboutme__info
+    .aboutme__description
+      .aboutme__title
+        h1.title.title_big  Обо мне
+            +icon('about_header')
+      .aboutme__content
+        .aboutme__myphoto
+          img(src="../assets/img/avatar.jpg", alt="").myphoto
+        .aboutme__text
+          h2.title.title_small Кто я
+          .text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .aboutme__skills
+      .skills
+        h2.title.title_small Чем я могу быть вам полезен
+        .text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+        .skills__list
+          .skills__item
+            .technology Frontend
+            .technology__list
+              +graph(["HTML5", "CSS3", "JavaScript & jQuery"])
+          .skills__item
+            .technology Backend
+            .technology__list
+              +graph(["PHP", "mySQL", "Node.js & npm", "Mongo.db"])
+          .skills__item
+            .technology WorkFlow
+            .technology__list
+              +graph(["Git", "Gulp", "Bower"])
+
+  section.aboutme__map
+    #aboutme__map
+    .aboutme__contacts
+        .contacts
+          h2.title.title_small Контакты
+          ul.contacts__list
+            li.contacts__item
+              a.contacts__link.contacts-skype(href='skype:pavlin_bird_of_happyness')
+                +icon('skype')
+                .contacts__text pavlin_bird_of_happyness
+            li.contacts__item
+              a.contacts__link(href='mailto:apavlin@yandex.ru')
+                +icon('envelope2')
+                .contacts__text apavlin@yandex.ru
+            li.contacts__item
+              a.contacts__link.contacts-tel(href='tel://+34-675-371-987')
+                +icon('phone2')
+                .contacts__text +34675371987
+            li.contacts__item
+              a.contacts__link.contacts-skype(href='https://www.google.es/maps/place/Carrer+de+Bilbao,+81,+08005+Barcelona/@41.4036035,2.2014965,375m/data=!3m1!1e3!4m5!3m4!1s0x12a4a33f19e7ae89:0xeb76df15d18eca0b!8m2!3d41.4037403!4d2.2021188?hl=ru&hl=ru' target="blank")
+                +icon('map_marker').contacts__icon
+                .contacts__text Барселона, ул.Бильбао 81 2-1
+    include ../common/_footerBig.pug
