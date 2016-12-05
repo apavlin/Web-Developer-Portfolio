@@ -1,0 +1,184 @@
+.works {
+  &__contactme{
+    background:url('../img/stones.jpg') center center no-repeat;
+    background-size: cover;
+    height: 1000px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    position: relative;
+  }
+  &__footer {
+    position: relative;
+    // align-self: flex-end;
+  }
+  &__review {
+
+
+  }
+  .triangle {
+    &_left{
+        fill: #f8f9f4;
+      }
+    &_right{
+      fill: #f8f9f4;
+    }
+  }
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      // height: 1000px;
+      width: 100%;
+
+    }
+    &__siteInfo{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+
+    }
+    &__siteSlider{
+      width: 50%;
+    }
+
+
+  &__title {
+    background: #f8f9f4;
+  }
+
+}
+
+.siteInfo {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #ebefe1;
+  &__technologies {
+    font-family: 'robotomedium';
+    color: #4e8839;
+    padding-bottom: 50px;
+  }
+  &__link {
+    background:  #6c9c5a;
+    padding: 15px 25px;
+
+    border-radius: 50px;
+    display: flex;
+    &:hover {
+      background:  rgba(#6c9c5a, .7);
+    }
+  }
+  &__text {
+    padding-left: 10px;
+  }
+}
+
+.siteSlider {
+  background: #e1e4d7;
+    &__main{
+
+    }
+    &__sliders {
+      display: flex;
+    }
+    &__sliderDown, &__sliderUp {
+      position: relative;
+    }
+    &__filterDown {
+      position: absolute;
+      display: block;
+      // height: 100%;
+      // width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(#b0b7aa, .5);
+      z-index: 2;
+    }
+    &__filterUp {
+      position: absolute;
+      display: block;
+      // height: 100%;
+      // width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(#93998d, .5);
+      z-index: 2;
+    }
+
+    &__arrows{
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+}
+
+.review {
+  display: flex;
+  justify-content: center;
+  &__item {
+    max-width: 430px;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+      font-family: 'robotoitalic';
+
+  }
+  &__img{
+    width: 93px;
+    height: 93px;
+    margin-bottom: 20px ;
+
+  }
+  &__text {
+margin-bottom: 20px ;
+position: relative;
+  }
+  &__authorName {
+font-family: 'robotobold_italic';
+    color: #4e8839;
+  }
+  &__authorState {
+  }
+  &__quote {
+    position: relative;
+  }
+}
+
+.icon-works_header {
+  font-size: 9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #4e8839;
+  opacity: 0.1;
+}
+
+.icon-quote {
+  fill: #4e8839;
+  font-size: 3rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  opacity: 0.2;
+}
+
+.icon-link {
+  &:hover {
+    fill: white;
+  }
+
+  }

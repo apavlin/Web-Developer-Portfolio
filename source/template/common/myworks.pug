@@ -1,0 +1,53 @@
+.works
+  section.works__top
+    include ../common/_top
+  .works__title
+        h1.title.title_big  Мои работы
+            +icon('works_header')
+  .works__box
+    .works__siteInfo
+      .siteInfo
+        h2.title.title_small Сайт фотографа недвижимости
+        .siteInfo__technologies HTML, CSS, JS, DESIGN
+        a(href="http://bypablo.ru" target="_blank").siteInfo__link
+          +icon('link')
+          .siteInfo__text Посмотреть сайт
+    .works__siteSlider
+      .siteSlider
+        .siteSlider__main
+          img(src="../assets/img/bypablo.png", alt="").siteSlider__mainImg
+        .siteSlider__sliders
+          .siteSlider__sliderDown
+            .siteSlider__filterDown
+              a(href="").siteSlider__arrows
+                +icon('portf_arrow_down')
+            img(src="../assets/img/pilmenis.png", alt="").siteSlider__downImg
+          .siteSlider__sliderUp
+            .siteSlider__filterUp
+              a(href="").siteSlider__arrows
+                +icon('portf_arrow_up')
+            img(src="../assets/img/yogi42.png", alt="").siteSlider__upImg
+  .works__contactme
+    h1.title.title_big Что обо мне говорят
+          +icon('about_header')
+    .works__review
+      ul.review
+        li.review__item
+          img(src="/assets/img/reviewer1.png", alt="").review__img
+          .review__text
+            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            +icon('quote')
+          .review__authorName Ковальчук Дмитрий
+          .review__authorState — основатель Loftschool
+        li.review__item
+          img(src="/assets/img/reviewer2.png", alt="").review__img
+          .review__text
+            | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            +icon('quote')
+          .review__authorName Зар Захаров
+          .review__authorState — преподаватель
+      //- .works__footer
+    include ../common/_footerBig.pug
+
+
+

@@ -20,7 +20,6 @@
     text-align: center;
     left: 0;
     right: 0;
-    z-index: 2;
     }
     &__triangle {
       position: absolute;
@@ -30,6 +29,7 @@
     &__user {
         .user {
           height: 100%;
+          z-index: 2;
             &__background {
               height: 250px;
               width: 100%;

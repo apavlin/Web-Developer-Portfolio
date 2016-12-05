@@ -23,6 +23,7 @@
 
   &__myphoto {
     margin-bottom: 30px;
+
   }
 
   &__text {
@@ -45,6 +46,7 @@
     transform: translate(-50%, -55%);
     z-index: 20;
   }
+
 }
 
 
@@ -96,6 +98,7 @@
   text-align: justify;
   line-height: 24px;
   padding-bottom: 40px;
+  text-indent: 40px;
 
 }
 .title {
@@ -121,6 +124,8 @@
       font-size: 4rem;
       color: #373e42;
       position: relative;
+      margin: 0 auto;
+      padding-top: 50px;
     }
   &_small {
       margin: 0 auto;
@@ -181,9 +186,9 @@
 .icon-about_header {
   font-size: 7.5rem;
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -55%);
   fill: #4e8839;
   opacity: 0.1;
 }
