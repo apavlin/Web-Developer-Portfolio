@@ -27,7 +27,7 @@
               a(href="").siteSlider__arrows
                 +icon('portf_arrow_up')
             img(src="../assets/img/yogi42.png", alt="").siteSlider__upImg
-  .works__contactme
+  .works__contactMe
     h1.title.title_big Что обо мне говорят
           +icon('about_header')
     .works__review
@@ -46,8 +46,21 @@
             +icon('quote')
           .review__authorName Зар Захаров
           .review__authorState — преподаватель
-      //- .works__footer
-    include ../common/_footerBig.pug
+
+    .works__contactMeform
+      .contactMeform
+        form#contactMeForm.form-container.clearfix(action='#', method='post')
+          .contactMeform__container
+            h2.title.title_small Связаться со мной
+            input#fieldname.formtextstyle(type='text', name='name', qtip-content='Вы не ввели имя', placeholder='Имя')
+            input#fieldmail.formtextstyle(type='email', name='mail', qtip-content='Вы не ввели email', qtip-position='right', placeholder='Email')
+            textarea#textarea.textarea.formtextstyle(name='message', cols='10', rows='7', qtip-content='Что вы хотите мне сообщить?', placeholder='Ваше сообщение')
+          .formbuttons
+            input.formbutton(type='submit', value='Отправить')
+            input.formbutton(type='reset', value='Очистить')
+
+    .works__footer
+      include ../common/_footerBig.pug
 
 
 

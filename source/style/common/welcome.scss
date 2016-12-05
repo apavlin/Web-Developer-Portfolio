@@ -24,6 +24,7 @@
 
   &__link {
     padding: 12px 29px;
+    transition: 0.3s;
     border: 2px solid white;
     border-radius: 40px;
     display: block;
@@ -98,6 +99,7 @@
     color: white;
     text-align: center;
     text-decoration: none;
+    transition: 0.3s;
     &:hover{
       color:#4e8839;
     }
@@ -105,7 +107,7 @@
 }
 
   //- стилизация меню для страницы привествия/авторизации
-  .nav_welcome {
+  .nav_green {
     .nav {
     &__list{
       display: flex;
@@ -117,6 +119,7 @@
     &__item {
       flex:1;
       background-color: #5f8d53;
+      transition: 0.3s;
       padding: 0 0;
         &:nth-of-type(1n+2) {
           border-left: 2px solid rgba(222, 227, 231, 0.502);

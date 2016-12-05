@@ -1,8 +1,8 @@
 .footerBig {
-  position: absolute;
-   left: 0;
-  right: 0;
-  bottom: 0;
+  // position: absolute;
+  //  left: 0;
+  // right: 0;
+  // bottom: 0;
   &__list {
     color: white;
     background: rgba(#373e42, .85);
@@ -24,6 +24,14 @@
   }
 }
 
+.aboutme__map {
+  .footerBig {
+  position: absolute;
+   left: 0;
+  right: 0;
+  bottom: 0;
+}
+}
 
 
 .quote {
