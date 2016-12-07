@@ -2,8 +2,7 @@
   &__contactMe{
     background: url('../img/stones.jpg') center center no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+    @include column
     justify-content: space-between;
   }
   &__footer {
@@ -164,32 +163,8 @@ font-family: 'robotobold_italic';
   overflow: hidden;
   &__container{
     padding: 20px 20px 0;
-  }
-}
-
-.icon-works_header {
-  font-size: 9rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: #4e8839;
-  opacity: 0.1;
-}
-
-.icon-quote {
-  fill: #4e8839;
-  font-size: 3rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  opacity: 0.2;
-}
-
-.icon-link {
-  &:hover {
-    fill: white;
+    @include column;
   }
 
-  }
+}
+

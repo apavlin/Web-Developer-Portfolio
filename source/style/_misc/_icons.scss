@@ -1,0 +1,100 @@
+.social {
+  display: inline-block;
+  padding: 0;
+    &__item {
+      display: inline-block;
+      margin-right: 20px;
+      &:last-child {
+            margin-right: 0;
+          }
+    }
+    &__text {
+      display: none;
+    }
+}
+
+.icon {
+  font-size: 1.3rem;
+  color: white;
+  transition: 0.2s;
+
+  &-vk {
+    font-size: 1.1rem;
+  }
+  &-github {
+    font-size: 1.2rem;
+  }
+}
+
+
+.icon-vk, .icon-github, .icon-in, .icon-hamburger, .icon-arrow_down {
+       &:hover {
+      color:#4e8839;
+    }
+
+}
+
+.icon-portfolio_header {
+  font-size: 15rem;
+  opacity: 0.15;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 0;
+}
+
+.icon-about_header {
+  font-size: 7.5rem;
+  fill: #4e8839;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.icon-works_header {
+  font-size: 9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #4e8839;
+  opacity: 0.1;
+}
+
+.icon-envelope2 {
+  font-size: 1rem;
+}
+
+.icon-hamburger {
+  font-size: 2rem;
+}
+
+.icon-arrow_down {
+  font-size: 1rem;
+}
+
+
+.icon-quote {
+  fill: #4e8839;
+  font-size: 3rem;
+  position: absolute;
+  left: 0;
+  top: -30%;
+  opacity: 0.2;
+}
+
+
+.social {
+  &_gray {
+    .icon {
+      fill: #8c9895;
+        &:hover {
+          fill:#4e8839;
+        }
+    }
+  }
+}

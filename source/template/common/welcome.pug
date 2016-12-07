@@ -1,27 +1,57 @@
 .welcome
   .welcome__auth
     .auth
-      a.auth__link(href="login.html") Авторизоваться
-  .welcome__window
-    .window
-      .window__container
-        .window__user
-          .user
-            .user__photo
-              img(src="../assets/img/avatar.jpg", alt="").user__img
-            .user__name Павел Адашкевич
-            .user__descr Личный сайт разработчика
-        .window__socials
-          .social_gray
-            include ../common/_socials.pug
-      .window__nav
-        nav.nav.nav_green
-          ul.nav__list
-            li.nav__item
-              a.nav__link(href="myworks.html") Мои работы
-            li.nav__item
-              a.nav__link(href="aboutme.html") Обо мне
-            li.nav__item
-              a.nav__link(href="blog.html") Блог
+      a.auth__link#auth__link(href="login.html") Авторизоваться
+  .welcome__window.flip-container
+    .flipper
+      .window.front
+        .window__container
+          .window__user
+            .user
+              .user__photo
+                img(src="../assets/img/avatar.jpg", alt="").user__img
+              .user__name Павел Адашкевич
+              .user__descr Личный сайт разработчика
+          .window__socials
+            .social_gray
+              include ../common/_socials.pug
+        .window__nav
+          nav.nav.nav_green
+            ul.nav__list
+              li.nav__item
+                a.nav__link(href="myworks.html") Мои работы
+              li.nav__item
+                a.nav__link(href="aboutme.html") Обо мне
+              li.nav__item
+                a.nav__link(href="blog.html") Блог
+      .window.back
+        .window__container
+          h2.title.title_small.title_white Авторизуйтесь
+          form#contactMeForm.form(action='#', method='post')
+              input#fieldname.formtextstyle(type='text', name='login', qtip-content='Вы не ввели имя', placeholder='Логин')
+              input#fieldmail.formtextstyle(type='password', name='password', qtip-content='Вы не ввели пароль', qtip-position='right', placeholder='Пароль')
+
+              label.form__radio.form__radio_checkbox
+                input(name="iamaman" type="checkbox").form__radio-elem
+                .form__radio-fake
+                .form__radio-title Я человек
+              .form__radio-label Вы точно не робот?
+              .form__radioBox
+                label.form__radio
+                  input(name="human" type="radio").form__radio-elem
+                  .form__radio-fake
+                  .form__radio-title Да
+                label.form__radio
+                  input(name="human" type="radio").form__radio-elem
+                  .form__radio-fake
+                  .form__radio-title Не уверен
+        .window__nav
+          nav.nav.nav_green
+            ul.nav__list
+              li.nav__item
+                a.nav__link#nav__link_welcome(href="#") На главную
+              li.nav__item
+                a.nav__link(href="#") Войти
+
   .welcome__footer
     include ../common/_footer.pug

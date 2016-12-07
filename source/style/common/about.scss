@@ -124,16 +124,22 @@
       font-size: 4rem;
       color: #373e42;
       position: relative;
-      margin: 0 auto;
+      // margin: 0 auto;
       padding-top: 50px;
     }
   &_small {
       margin: 0 auto;
       max-width: 25rem;
-      font-size: 3rem;
+      font-size: 2.2rem;
       color: #373e42;
       position: relative;
     }
+  &_white {
+      color: #fff;
+      &:after {
+        background: #fff;
+      }
+  }
   &_about{
     }
 }
@@ -183,19 +189,7 @@
   }
 }
 
-.icon-about_header {
-  font-size: 7.5rem;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  fill: #4e8839;
-  opacity: 0.1;
-}
 
-.icon-envelope2 {
-  font-size: 1rem;
-}
 
 
 @keyframes swing {

@@ -21,6 +21,14 @@ module.exports = function() {
         mode: {
           symbol: {
             sprite: "../sprite.svg",
+            example: {
+                  dest: '../tmp/spriteSvgDemo.html' // демо html
+                  },
+                  render: {
+                    scss: {
+                    dest: '../tmp/spriteSvg' // куда кладем файл стилей и имя файла
+                  }
+                },
             render: {
               scss: {
                 dest:'../../style/_misc/_sprite.scss', //куда будет генерироваться получившийся файл стилей для наших иконок (в нём будут размеры)

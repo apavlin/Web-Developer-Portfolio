@@ -21,7 +21,9 @@
 }
 
 .auth {
-
+position: absolute;
+    top: 5%;
+    right: 3%;
   &__link {
     padding: 12px 29px;
     transition: 0.3s;
@@ -40,10 +42,11 @@
   background-color: rgba(18,38,32,0.6);
   border-radius: 5px;
   overflow: hidden;
-  &__container {
-  padding: 40px 70px 0 70px;
 
+  &__container {
+      padding: 40px 10px 0 10px;
   }
+
   &__socials {
     padding-bottom: 37px;
   }
@@ -60,17 +63,21 @@
     margin-bottom: 13px;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 10;
   }
   &__img{
+    z-index: 10;
     width: 143px;
     height: 143px;
   }
   &__name{
+    z-index: 10;
     font-family: 'robotoregular';
     font-size: 28px;
     margin-bottom: 8px;
   }
   &__descr{
+    z-index: 10;
     font-family: 'robotomedium';
     font-size: 16px;
     opacity:0.8;
@@ -141,13 +148,44 @@
 }
 
 
-.social {
-  &_gray {
-  .icon {
-    color: #8c9895;
-    &:hover {
-      color:#4e8839;
-    }
-  }
-  }
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+  /* flip the pane when hovered */
+ .flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  min-width: 360px;
+  min-height: 380px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }

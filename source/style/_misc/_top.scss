@@ -28,16 +28,7 @@
     }
     &__user {
         .user {
-          height: 100%;
-          z-index: 2;
-            &__background {
-              height: 250px;
-              width: 100%;
-              position: absolute;
-              background: url('../img/portfolio_header.svg') center center no-repeat;
-              background-size: contain;
-              opacity: 0.15;
-            }
+          position: relative;
         }
     }
 }
@@ -51,15 +42,6 @@
   &_right{
       fill: #ebefe2;
     }
-}
-
-
-.icon-hamburger {
-  font-size: 2rem;
-}
-
-.icon-arrow_down {
-  font-size: 1rem;
 }
 
 

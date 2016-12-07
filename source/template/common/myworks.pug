@@ -42,14 +42,14 @@
         li.review__item
           img(src="/assets/img/reviewer2.png", alt="").review__img
           .review__text
-            | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            | Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
             +icon('quote')
           .review__authorName Зар Захаров
           .review__authorState — преподаватель
 
     .works__contactMeform
       .contactMeform
-        form#contactMeForm.form-container.clearfix(action='#', method='post')
+        form#contactMeForm.form-container(action='#', method='post')
           .contactMeform__container
             h2.title.title_small Связаться со мной
             input#fieldname.formtextstyle(type='text', name='name', qtip-content='Вы не ввели имя', placeholder='Имя')

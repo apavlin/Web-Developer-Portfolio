@@ -1,5 +1,7 @@
+include ../common/_mixins.pug
 .top
   .top__container
+    +icon('portfolio_header')
     .top__head
       .head__socials
         include ../common/_socials.pug
@@ -8,7 +10,6 @@
           +icon('hamburger')
     .top__user
       .user
-        .user__background
         .user__photo
           img(src="../assets/img/avatar.jpg", alt="").user__img
         .user__name Павел Адашкевич
