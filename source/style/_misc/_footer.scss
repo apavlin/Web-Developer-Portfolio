@@ -1,17 +1,43 @@
 .footer {
   align-self: flex-end;
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
-
-    &__text {
+    &__container {
       display: flex;
+      position: relative;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      // height: 70px;
-      padding: 35px 0;
-      font-family: 'robotoregular';
+      margin: 35px 0;
+       font-family: 'robotoregular';
       color: white;
+
+       @include for-size(phone-only) {
+        flex-direction: column;
+        margin: 20px 0 5px;
+        font-family: 'robotolight';
+      }
     }
+    &__name {
+      padding-right:  10px;
+    }
+    &__text {
+      display: inline;
+
+      font-weight: normal;
+      padding: 0 10px;
+
+       &:nth-child(1)  {
+          border-left: 2px solid rgba(222, 227, 231, 0.502);
+          border-right: 2px solid rgba(222, 227, 231, 0.502);
+      }
+
+      @include for-size(phone-only) {
+        line-height: 25px;
+        padding: 0 10px;
+      &:nth-child(1) {
+          border-left: none;
+        }
+      }
+    }
+
+
+
 }

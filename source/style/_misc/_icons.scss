@@ -38,14 +38,23 @@
   font-size: 15rem;
   opacity: 0.15;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   z-index: 0;
+  @include for-size(desktop-up) {
+    font-size: 10rem;
+      }
+  @include for-size(phone-only) {
+    display: none;
+    }
 }
 
 .icon-about_header {
   font-size: 7.5rem;
+  @include for-size(phone-only) {
+    font-size: 5rem;
+    }
   fill: #4e8839;
   position: absolute;
   top: 50%;
@@ -57,6 +66,9 @@
 
 .icon-works_header {
   font-size: 9rem;
+  @include for-size(phone-only) {
+    font-size: 5rem;
+    }
   position: absolute;
   top: 50%;
   left: 50%;

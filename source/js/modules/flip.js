@@ -9,3 +9,10 @@ $('#nav__link_welcome').on('click', function(event) {
   $('.flip-container').removeClass('flip');
   $('#auth__link').css('transform', 'scale(1)');
 });
+
+$(document).mouseup(function (e) {
+    var container = $("YOUR CONTAINER SELECTOR");
+    if (container.has(e.target).length === 0){
+        container.hide();
+    }
+});

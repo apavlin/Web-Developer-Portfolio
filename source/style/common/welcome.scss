@@ -1,15 +1,20 @@
 .welcome {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  // min-width: 100vh;
   background:url('../img/water.jpg') center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   justify-content: space-between;
   text-align: center;
   &__auth {
     align-self: flex-end;
-    padding: 20px 80px;
+    @include for-size(phone-only) {
+      align-self: center;
+
+    }
+    // padding: 20px 80px;
   }
   &__window {
     align-self: center;
@@ -21,17 +26,26 @@
 }
 
 .auth {
-position: absolute;
-    top: 5%;
-    right: 3%;
+  z-index: 10;
+    margin: 25px 100px 0 0;
+
+    @include for-size(big-desktop-up) {
+    margin: 25px 25px 0 0;
+    }
+
+    @include for-size(phone-only) {
+    align-self: center;
+    margin: 20px 0 10px 0;
+    }
+
   &__link {
     padding: 12px 29px;
     transition: 0.3s;
     border: 2px solid white;
     border-radius: 40px;
-    display: block;
-    height: 100%;
-    width: 100%;
+    display: inline-block;
+    // height: 100%;
+    // width: 100%;
       &:hover {
         background-color: rgba(18,38,32,0.6);
       }
@@ -39,9 +53,16 @@ position: absolute;
 
 }
 .window {
+  z-index: 10;
   background-color: rgba(18,38,32,0.6);
   border-radius: 5px;
-  overflow: hidden;
+  overflow: auto;
+  // min-height: 390px;
+  // min-width: 340px;
+
+@include for-size(phone-only) {
+    max-width: 290px;
+    }
 
   &__container {
       padding: 40px 10px 0 10px;
@@ -56,6 +77,8 @@ position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  white-space: nowrap;
   color: #fff;
   &__photo{
     width: 143px;
@@ -67,19 +90,23 @@ position: absolute;
   }
   &__img{
     z-index: 10;
-    width: 143px;
-    height: 143px;
+    width: 100%;
+    height: 100%;
   }
   &__name{
     z-index: 10;
     font-family: 'robotoregular';
-    font-size: 28px;
+    font-size: 2.2rem;
     margin-bottom: 8px;
+    @include for-size(phone-only) {
+      font-size: 1.4rem;
+
+    }
   }
   &__descr{
     z-index: 10;
     font-family: 'robotomedium';
-    font-size: 16px;
+    // font-size: 16px;
     opacity:0.8;
     margin-bottom: 35px;
   }
@@ -91,17 +118,29 @@ position: absolute;
     padding: 0;
     display: flex;
     justify-content: flex-start;
+    @include for-size(phone-only) {
+      justify-content: center;
+    }
     flex-wrap: wrap;
   }
   &__item {
 
     height: 100%;
     padding: 0 30px 20px 0;
-
+    &:last-child {
+      padding-right: 0;
+    }
+    @include for-size(big-desktop-up) {
+        padding: 0 15px 20px 0;
+      }
+    @include for-size(phone-only) {
+         padding: 0 5px 20px 0;
+    }
   }
+
   &__link{
     font-family: 'robotomedium';
-    font-size: 16px;
+    font-size: 1rem;
     text-align:center;
     color: white;
     text-align: center;
@@ -119,8 +158,6 @@ position: absolute;
     &__list{
       display: flex;
       flex-wrap: nowrap;
-
-      // justify-content: center;
       width: 100%;
     }
     &__item {
@@ -138,6 +175,7 @@ position: absolute;
     &__link{
       line-height: 2.75rem;
       display: block;
+      font-size: 14px;
     width: 100%;
     height: 100%;
       &:hover {

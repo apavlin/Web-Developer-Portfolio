@@ -1,24 +1,25 @@
-.formbox {
-  /*height: 840px;*/
-}
 
 .textarea {
-  // height: 125px;
   resize: none;
   width: 100%;
-  // border: 0;
 }
 
 .formtextstyle {
   border: 0;
   outline: none;
-  // border: 1px solid #48cbe8;
   border-radius: 20px;
   font-family: 'robotoregular';
   padding: 13px 17px;
-  width:300px;
+  min-width:260px;
   margin-bottom: 19px;
 }
+.works {
+  .formtextstyle {
+    width: 100%;
+  }
+
+}
+
 .formbuttons {
   display: flex;
 }
@@ -36,7 +37,7 @@
   width: 100%;
   height: 100%;
   line-height: 2.75rem;
-  background-color: #5f8d53;// border-radius: 5px;
+  background-color: #5f8d53;
   border: transparent;
   transition: 0.3s;
   &:nth-of-type(1n+2) {

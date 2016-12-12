@@ -24,3 +24,23 @@
   flex-direction: column;
   align-items: center;
 }
+
+
+@mixin for-size($range) {
+  $phone-upper-boundary: 768px;
+  $tablet-portrait-upper-boundary: 1024px;
+  $tablet-landscape-upper-boundary: 1200px;
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+  } @else if $range == tablet-portrait-up {
+    @media (max-width: $phone-upper-boundary) { @content; }
+  } @else if $range == tablet-landscape-up {
+    @media (max-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == desktop-up {
+    @media (max-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == big-desktop-up {
+    @media (max-width: $desktop-upper-boundary) { @content; }
+  }
+}
